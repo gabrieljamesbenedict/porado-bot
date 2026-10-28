@@ -61,4 +61,5 @@ src/
 - Ignores messages written by bots and by itself.
 - Only responds when the bot is @mentioned in the message.
 - Strips the mention from the prompt before sending it to the model.
+- Shows a refreshed typing indicator until the answer is posted.
 - Splits replies longer than Discord's 2,000 character limit across multiple messages.
