@@ -1,24 +1,33 @@
 {
   "name": "porado-bot",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "description": "Discord bot that answers @mentions with an LLM hosted on NVIDIA NIM.",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.18.0"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "workspaces": [
-    "apps/*"
+  "scripts": {
+    "start": "node --env-file=.env src/index.ts",
+    "dev": "node --watch --env-file=.env src/index.ts",
+    "typecheck": "tsc --noEmit",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "keywords": [
+    "discord",
+    "bot",
+    "llm",
+    "openai"
   ],
+  "license": "ISC",
   "dependencies": {
-    "discord.js": "^14.27.0"
+    "discord.js": "^14.27.0",
+    "openai": "^7.45.1"
   },
   "devDependencies": {
     "@types/node": "^26.6.5",
-    "eslint": "^10.13.0",
+    "prettier": "^3.9.10",
     "typescript": "^7.0.2"
   }
 }
